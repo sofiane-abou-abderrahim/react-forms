@@ -27,3 +27,10 @@
 3. call the state updating functions inside of this `handleInputChange` function
 4. feed the `event.target.value` back into the inputs by setting the `value` props equal to the state values
 5. `console.log` the state values in the `handleSubmit` function
+
+## 3. Getting User Input via Refs
+
+1. copy the `Login.jsx` component & name it `StateLogin.jsx` to keep that code where we use state for tracking the user input
+2. use refs instead of state
+3. connect those refs to the input fields
+4. use this connection inside of the `handleSubmit` function to get the entered email & the entered password
