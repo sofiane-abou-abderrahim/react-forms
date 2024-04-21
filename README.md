@@ -50,3 +50,10 @@
 11. and calling `Object.fromEntries()` on that array will give you an object where you have key value pairs for all your input fields
 12. get back the lost multi value input fields & manually extract them & store them with the `getAll()` method
 13. merge them into the `data` object by adding a new `acquisition` property to it
+
+## 5. Resetting Forms
+
+1. if you are managing the input with state, reset those state values (see `StateLogin.jsx`)
+2. if you're getting the entered values with refs, reset the inputs by manually setting the value property of the connected input elements to empty strings as in `Login.jsx` (but not really recommended)
+3. instead if you're working with refs, it's typically better to reset the form with help of the `reset()` function as in `Signup.jsx` (imperative code again, but less code)
+4. comment out the code snippets responsible for resetting the forms
