@@ -57,3 +57,11 @@
 2. if you're getting the entered values with refs, reset the inputs by manually setting the value property of the connected input elements to empty strings as in `Login.jsx` (but not really recommended)
 3. instead if you're working with refs, it's typically better to reset the form with help of the `reset()` function as in `Signup.jsx` (imperative code again, but less code)
 4. comment out the code snippets responsible for resetting the forms
+
+## 6. Validating Input on Every Keystroke via State
+
+1. in `App.jsx`, render the `<Login>` component imported from `./components/StateLogin.jsx` to get the stateful version of that login form
+2. validate the `email` input on every keystroke by adding a computed value named `emailIsInvalid` to this `StateLogin.jsx` component
+3. set this `emailIsInvalid` constant based on the email state value which you're managing, so here we could say that `emailIsInvalid` should be true if the entered email does not include an `@` symbol
+4. update the UI by outputting an error message if this `emailIsInvalid` is true
+5. make sure that `emailIsInvalid` is only set to true if the user did start entering a value
