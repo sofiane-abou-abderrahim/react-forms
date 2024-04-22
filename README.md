@@ -65,3 +65,17 @@
 3. set this `emailIsInvalid` constant based on the email state value which you're managing, so here we could say that `emailIsInvalid` should be true if the entered email does not include an `@` symbol
 4. update the UI by outputting an error message if this `emailIsInvalid` is true
 5. make sure that `emailIsInvalid` is only set to true if the user did start entering a value
+
+## 7. Validating Input Upon Lost Focus (Blur)
+
+1. in `StateLogin.jsx`, react to the email input field losing focus by adding the `onBlur` event listening Prop to it
+2. add a new `handleInputBlur` event handling function
+3. manage a new `didEdit` state, because now, we don't just wanna keep track of the value that has been entered into an input, but we also wanna keep track of whether the user touched this value or not
+4. update this state in the `handleInputBlur` function
+5. trigger this `handleInputBlur` function as a value to the `onBlur` prop
+6. use this new `didEdit` state to perform validation
+   1. And we can check whether `emailIsInvalid` by not checking for whether it still has the initial value `enteredValues.email !== ''`
+   2. but by instead keeping this check `!enteredValues.email.includes('@')` and combining this check with `didEdit.email`
+7. remove this error message as soon as the user starts typing again so that he has another chance of entering a valid value until he's done typing and the input loses focus again at which point of time this validation should run again
+   1. in `handleInputChange`, also update`didEdit` on every keystroke
+   2. reset the `email` & `password` properties to `false` whenever the user starts typing again
