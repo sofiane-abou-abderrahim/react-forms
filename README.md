@@ -79,3 +79,12 @@
 7. remove this error message as soon as the user starts typing again so that he has another chance of entering a valid value until he's done typing and the input loses focus again at which point of time this validation should run again
    1. in `handleInputChange`, also update`didEdit` on every keystroke
    2. reset the `email` & `password` properties to `false` whenever the user starts typing again
+
+## 8. Validating Input Upon Form Submission
+
+1. switch back from the `StateLogin.jsx` version of the `Login` form to the ref-based `Login` form in `App.jsx`
+2. since we wanna stick to refs, you can basically only validate the input when the user submits the form
+   1. in the `handleSubmit` function, determine whether the email is valid, by adding the `emailIsalid` constant
+   2. when the form is submitted, perform your check by checking if you don't have an `@` symbol in that email with the `includes`
+3. reflect this error in your form with some `emailIsInvalid` state
+4. you can also add submission-based validation in `StateLogin.jsx` even if you are already validating the user input on every keystroke because it is always a good idea
