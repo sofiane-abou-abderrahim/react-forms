@@ -108,3 +108,9 @@
 3. use this `<Input>` component in `StateLogin.jsx`
 4. manage validation for password
 5. set an error message for email & password if not valid
+
+## 12. Outsourcing Validation Logic
+
+1. import `isEmail`, `isNotEmpty` & `hasMinLength` from `validation.js` in `StateLogin.jsx`
+2. use `isEmail` & `isNotEmpty` to validate the email
+3. use `hasMinLength` to validate the password
