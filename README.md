@@ -94,3 +94,9 @@
 1. switch back to `Signup.jsx` in `App.jsx`
 2. add the browser built-in `required` prop to validate the inputs & form control elements
 3. add the browser built-in `minLength` prop to the `password` input
+
+## 10. Mixing Custom & Built-in Validation Logic
+
+1. make sure that the value entered in the `confirm-password` field matches the value entered into the `password` field with help of a `passwordsAreNotEqual` state
+2. when the form is submitted before console logging the data, check if `data.password` is not equal to the `data['confirm-password']` prop & if it is true update the `passwordsAreNotEqual` state
+3. output an error if the passwords are not equal with help of the `passwordsAreNotEqual` state
