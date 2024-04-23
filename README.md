@@ -114,3 +114,9 @@
 1. import `isEmail`, `isNotEmpty` & `hasMinLength` from `validation.js` in `StateLogin.jsx`
 2. use `isEmail` & `isNotEmpty` to validate the email
 3. use `hasMinLength` to validate the password
+
+## 13. Creating a Custom useInput Hook
+
+1. add a new `hooks` folder & inside add a new `useInput.js` file
+2. build this hook
+3. use this hook in `StateLogin.jsx`
