@@ -88,3 +88,9 @@
    2. when the form is submitted, perform your check by checking if you don't have an `@` symbol in that email with the `includes`
 3. reflect this error in your form with some `emailIsInvalid` state
 4. you can also add submission-based validation in `StateLogin.jsx` even if you are already validating the user input on every keystroke because it is always a good idea
+
+## 9. Validating Input via Built-in Validation Props
+
+1. switch back to `Signup.jsx` in `App.jsx`
+2. add the browser built-in `required` prop to validate the inputs & form control elements
+3. add the browser built-in `minLength` prop to the `password` input
