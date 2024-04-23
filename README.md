@@ -100,3 +100,11 @@
 1. make sure that the value entered in the `confirm-password` field matches the value entered into the `password` field with help of a `passwordsAreNotEqual` state
 2. when the form is submitted before console logging the data, check if `data.password` is not equal to the `data['confirm-password']` prop & if it is true update the `passwordsAreNotEqual` state
 3. output an error if the passwords are not equal with help of the `passwordsAreNotEqual` state
+
+## 11. Building & Using a Reusable Input Component
+
+1. switch back to `<StateLogin>` in `App.jsx`
+2. add a new `Input.jsx` component file
+3. use this `<Input>` component in `StateLogin.jsx`
+4. manage validation for password
+5. set an error message for email & password if not valid
